@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <script>
+      const reset = () => {
+        document.getElementsByClassName("input-form").value = null;
+      };
+    </script>
+  </head>
+  <body>
+    <form>
+      <div class="login-form">
+        <label for="name">사용자명 : </label>
+        <input type="text" id="name" class="input-form" />
+      </div>
+      <div class="login-form">
+        <label for="password">비밀번호 : </label>
+        <input type="password" id="password" class="input-form" />
+      </div>
+      <div class="login-form">
+        <label for="email">이메일 : </label>
+        <input type="email" id="email" class="input-form" />
+      </div>
+      <div class="login-form">
+        <label for="tel">전화번호 : </label>
+        <input type="tel" id="tel" class="input-form" />
+      </div>
+      <div class="login-form">
+        <label for="auto">자동로그인 </label>
+        <input type="checkbox" id="auto" class="input-form" />
+      </div>
+      <div class="login-form">
+        <button onclick="reset">초기화</button>
+        <button onclick="location.href=''">로그인</button>
+      </div>
+    </form>
+  </body>
+</html>
