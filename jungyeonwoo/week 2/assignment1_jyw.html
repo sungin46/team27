@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        color: #565656;
+      }
+
+      header {
+        text-align: center;
+        padding: 30px 0;
+      }
+
+      article {
+        padding: 10px;
+        margin-bottom: 30px;
+
+        & > h3 {
+          margin-bottom: 10px;
+        }
+
+        & > div {
+          display: grid;
+
+          & span:first-child {
+            font-size: 16px;
+          }
+
+          & span:last-child {
+            color: #121212;
+            margin-bottom: 10px;
+            font-size: 20px;
+          }
+        }
+
+        & > p {
+          margin-bottom: 10px;
+        }
+
+        & > a {
+          text-decoration: none;
+          color: #565656;
+
+          &:hover {
+            color: #121212;
+          }
+        }
+      }
+
+      .img-box {
+        padding: 30px;
+      }
+
+      img {
+        width: 300px;
+        border-radius: 100%;
+      }
+
+      table tr th {
+        text-align: start;
+      }
+
+      table tr td {
+        padding-right: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>About Me</h1>
+    </header>
+    <section>
+      <article id="profile">
+        <div class="img-box">
+          <img src="../../Desktop/104333720.jpeg" />
+        </div>
+        <h3>PROFILE</h3>
+        <div><span>Name</span><span>정연우 / Jungyeonwoo</span></div>
+        <div><span>Birth</span><span>19980421</span></div>
+        <div><span>Location</span><span>Seoul</span></div>
+        <div><span>Email</span><span>oscar0421@kakao.com</span></div>
+        <div><span>Hobby</span><span>스쿠버다이빙, 사진촬영</span></div>
+        <div><span>Major</span><span>전자공학</span></div>
+        <div><span>MBTI</span><span>ENTP</span></div>
+      </article>
+      <article id="skills">
+        <h3>SKILLS</h3>
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Level</th>
+          </tr>
+          <tr>
+            <td>HTML</td>
+            <td>⭐️⭐️⭐️⭐️⭐️</td>
+          </tr>
+          <tr>
+            <td>CSS</td>
+            <td>⭐️⭐️⭐️⭐️</td>
+          </tr>
+          <tr>
+            <td>Javsscript</td>
+            <td>⭐️⭐️⭐️⭐️</td>
+          </tr>
+          <tr>
+            <td>React</td>
+            <td>⭐️⭐️⭐️</td>
+          </tr>
+          <tr>
+            <td>Express</td>
+            <td>⭐️⭐️⭐️</td>
+          </tr>
+          <tr>
+            <td>Mysql / MariaDB</td>
+            <td>⭐️⭐️</td>
+          </tr>
+          <tr>
+            <td>Figma</td>
+            <td>⭐️⭐️</td>
+          </tr>
+        </table>
+      </article>
+      <article id="goal">
+        <h3>GOAL</h3>
+        <p>10주 완성! 프로젝트 캠프의 완주!</p>
+        <p>멋진 포트폴리오 제작!</p>
+        <p>함께 성장하는 기업에 취업하기!</p>
+        <p>오픈소스 라이브러리 컨트리뷰터 되기!</p>
+        <p>프론트엔드 개발의 정점에 서보기!</p>
+      </article>
+      <article id="contact">
+        <h3>CONTACT</h3>
+        <a href="https://github.com/0SCAR0421">Github</a>
+        <a href="https://velog.io/@oscar0421">Velog</a>
+        <a href="mailto:oscar0421@kakao.com">Email</a>
+      </article>
+    </section>
+  </body>
+</html>
