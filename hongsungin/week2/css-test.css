@@ -1,0 +1,81 @@
+.outer,
+.inner {
+  border: 2px solid #f00;
+}
+.outer {
+  margin: 10px;
+}
+.margin {
+  margin: 10px;
+}
+.padding {
+  padding: 10px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  border: 1px solid #000;
+}
+.item {
+  background: #983;
+  color: #fff;
+  padding: 20px;
+}
+
+.container2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item2 {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #000;
+  margin: 10px;
+}
+
+.container3 {
+  width: 500px;
+  height: 500px;
+  background: url("hong.jpeg") no-repeat 50% 50%;
+  background-size: cover;
+}
+
+.container4 {
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 35%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
+
+.container5 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 700px;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 150px;
+  box-shadow: 0, 2px, 4px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+  border-radius: 5px;
+  padding: 10px;
+}
