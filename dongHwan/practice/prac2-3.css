@@ -1,0 +1,20 @@
+.prac1 h1 {
+  color: red;
+
+  @media screen and (max-width: 768px) {
+    color: blue;
+  }
+}
+
+.prac2 {
+  display: flex;
+}
+.prac2 div {
+  width: 100px;
+  height: 100px;
+  background-color: black;
+
+  @media screen and (max-width: 768px) {
+    background-color: grey;
+  }
+}

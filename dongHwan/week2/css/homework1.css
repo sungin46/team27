@@ -1,0 +1,13 @@
+.header {
+  display: flex;
+  justify-content: space-around;
+}
+.navbutton {
+  width: 165px;
+
+  display: flex;
+  align-items: center;
+}
+.startbtn {
+  background-color: green;
+}
