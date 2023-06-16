@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>계산기</title>
+  </head>
+  <body>
+    <div class="container">
+     <div>
+      <p>덧셈 계산하기</p>
+      <input id="plus_num1" type="text" >
+      <input id="plus_num2" type="text">
+      <button onclick="add()">계산하기</button>
+      <p id="plus_result"></p>
+     </div>
+     <div>
+      <p>뺄셈 계산하기</p>
+      <input id="minus_num1" type="text" >
+      <input id="minus_num2" type="text">
+      <button onclick="minus()">계산하기</button>
+      <p id="minus_result"></p>
+     </div>
+          <div>
+      <p>나눗셈 계산하기</p>
+      <input id="divide_num1" type="text" >
+      <input id="divide_num2" type="text">
+      <button onclick="divide()">계산하기</button>
+      <p id="divide_result"></p>
+     </div>     <div>
+      <p>곱셈 계산하기</p>
+      <input id="multiple_num1" type="text" >
+      <input id="multiple_num2" type="text">
+      <button onclick="multiple()">계산하기</button>
+      <p id="multiple_result"></p>
+     </div>
+      </div>
+      <script>
+
+       function add() {
+        const num1 = Number(document.getElementById("plus_num1").value);
+        const num2 = Number(document.getElementById("plus_num2").value);
+        const result = num1 + num2;
+        document.getElementById("plus_result").textContent = `결과: ${result}`;
+
+       }
+       function minus() {
+        const num1 = Number(document.getElementById("minus_num1").value);
+        const num2 = Number(document.getElementById("minus_num2").value);
+        const result = num1 - num2;
+        document.getElementById("minus_result").textContent = `결과: ${result}`;
+
+       }       
+       function divide() {
+        const num1 = Number(document.getElementById("divide_num1").value);
+        const num2 = Number(document.getElementById("divide_num2").value);
+        const result = num1 / num2;
+        document.getElementById("divide_result").textContent = `결과: ${result}`;
+
+       }       
+       function multiple() {
+        const num1 = Number(document.getElementById("multiple_num1").value);
+        const num2 = Number(document.getElementById("multiple_num2").value);
+        const result = num1 * num2;
+        document.getElementById("multiple_result").textContent = `결과: ${result}`;
+
+       }
+
+
+      </script>
+    </div>
+  </body>
+</html>
