@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input id="todo" type="text" placeholder="할일을 입력하세요" />
+    <button onclick="todoHandler()">등록</button>
+    <ul id="todoList">
+      투두리스트
+    </ul>
+    <script>
+      function todoHandler() {
+        const todoText = document.getElementById("todo");
+        const todoValue = todoText.value;
+
+        // 새로운 <li> 요소 생성
+        const newTodoItem = document.createElement("li");
+
+        // 할 일 텍스트를 담을 <span> 요소 생성
+        const todoTextSpan = document.createElement("span");
+        todoTextSpan.textContent = todoValue;
+
+        // 삭제 버튼 생성
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "삭제";
+        deleteButton.addEventListener("click", function () {
+          // 삭제 버튼 클릭 시 부모 요소인 <li> 요소 제거
+          this.parentNode.remove();
+        });
+
+        // <li> 요소에 할 일 텍스트와 삭제 버튼 추가
+        newTodoItem.appendChild(todoTextSpan);
+        newTodoItem.appendChild(deleteButton);
+
+        // <ul> 요소에 <li> 요소 추가
+        const todoList = document.getElementById("todoList");
+        todoList.appendChild(newTodoItem);
+
+        // 할 일 입력 필드 초기화
+        todoText.value = "";
+      }
+    </script>
+  </body>
+</html>
