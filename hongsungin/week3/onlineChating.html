@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h2>실시간 채팅?</h2>
+    </header>
+    <div class="chating-list">
+      <div class="chating">
+        <p><strong>User1 : </strong> 안녕하세요~</p>
+      </div>
+    </div>
+    <div class="chating-input">
+      <input id="chating-name" placeholder="사용자명" />
+      <input id="chating-msg" placeholder="메시지를 입력하세요" />
+      <button type="button" id="export-msg" onclick="funcExport()">전송</button>
+    </div>
+    <script>
+      const chatMsg = document.getElementById("chating-msg");
+
+      chatMsg.addEventListener("keyup", (e) => {
+        if (e.keyCode === 13) {
+          let chatName = document.getElementById("chating-name").value;
+          let chatMsg = document.getElementById("chating-msg");
+          let chatMsgValue = chatMsg.value;
+          e.preventDefault();
+          let message = document.createElement("div");
+          message.className = "chating";
+          message.innerHTML = `<p><strong>${chatName} : </strong>${chatMsgValue}</p>`;
+          document.querySelector(".chating-list").append(message);
+          chatMsg.value = "";
+        }
+      });
+      const funcExport = () => {
+        let chatName = document.getElementById("chating-name").value;
+        let chatMsg = document.getElementById("chating-msg");
+        let chatMsgValue = chatMsg.value;
+        let message = document.createElement("div");
+        message.className = "chating";
+        message.innerHTML = `<p><strong>${chatName} : </strong>${chatMsgValue}</p>`;
+        document.querySelector(".chating-list").append(message);
+        chatMsg.value = "";
+      };
+    </script>
+  </body>
+</html>
