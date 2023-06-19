@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .notice-list {
+        padding: 20px;
+      }
+      .notice {
+        margin: 10px;
+        padding: 10px;
+        border: 1px solid #000;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="notice-list">
+      <div class="notice">
+        <h2>첫 번째 게시물</h2>
+        <p>안녕하세요!</p>
+      </div>
+      <div class="notice">
+        <h2>두 번째 게시물</h2>
+        <p>안녕하세요!</p>
+      </div>
+    </div>
+    <script>
+      let notice = [
+        { header: "첫번째 게시물", content: "안녕하세요!" },
+        { header: "두번째 게시물", content: "반갑습니다!" },
+      ];
+      notice.forEach((a, i) => {
+        const noticeList = document.createElement("div");
+        noticeList.className = "notice";
+        noticeList.innerHTML = `<h2>${notice[i].header}</h2><p>${notice[i].content}</p>`;
+        document.querySelector(".notice-list").append(noticeList);
+      });
+    </script>
+  </body>
+</html>
