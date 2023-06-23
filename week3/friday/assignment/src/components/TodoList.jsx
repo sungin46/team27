@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState } from "react";
 
 const TodoItem = ({ id, text, handleDelete }) => {
   return (
@@ -11,14 +11,18 @@ const TodoItem = ({ id, text, handleDelete }) => {
 
 const TodoList = () => {
   const [todoList, setTodoList] = useState([]);
-  const [text, setText] = useState('');
+  const [text, setText] = useState("");
   const handleInput = (event) => {
     setText(event.target.value);
   };
   const handleEnter = (event) => {
-    if (event.code === 'Enter') {
+    if (
+      event.code === "Enter" &&
+      !event.nativeEvent.isComposing &&
+      text !== ""
+    ) {
       setTodoList((prev) => [...prev, { id: Date.now(), text }]);
-      setText('');
+      setText("");
     }
   };
   const handleDelete = (id) => {
